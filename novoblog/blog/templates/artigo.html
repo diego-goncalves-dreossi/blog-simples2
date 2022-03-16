@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+    <div class="blog-post">
+        <h2 class="blog-post-title">{{artigo.titulo}}</h2>
+        <p class="blog-post-meta">Escrito por <a href="#">{{artigo.autor.get_full_name}}</a>, em {{artigo.data_pub|date:'d,M Y'}}</p>
+
+        {{artigo.texto|safe}}
+    </div><!-- /.blog-post -->
+{% endblock content %}
